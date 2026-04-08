@@ -529,6 +529,21 @@
 }
 </style>
 <button id="musicBtn" onclick="toggleMusic()">🎶 Play Music</button>
+<script>
+const music = document.querySelector("audio");
+let isPlaying = false;
 
+function toggleMusic() {
+    if (!isPlaying) {
+        music.play();
+        document.getElementById("musicBtn").innerText = "⏸ Pause Music";
+        isPlaying = true;
+    } else {
+        music.pause();
+        document.getElementById("musicBtn").innerText = "🎶 Play Music";
+        isPlaying = false;
+    }
+}
+</script>
 </body>
 </html>
